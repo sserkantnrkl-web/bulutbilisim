@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>1.2 – Bulut Bilişim Hafta 01</title><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><div class="wrap"><nav id="nav" aria-label="Bölümler"></nav><main><h1>1.2 Sorumluluk sınırı</h1>
+<p class="lead">Yönetilen servise geçince görev listesi kısalır mı, değişir mi?</p>
+<h2>Bir uygulamayı çalıştıran yığın</h2>
+<p>Yığın her modelde aynıdır; model, sınırın nereden geçtiğini söyler. Üstteki katmanlar müşteriye, alttakiler sağlayıcıya yakındır.</p>
+<ul><li><strong>Veri, kimlik ve erişim:</strong> bağlantı kayıtları, kiracı anahtarları</li><li><strong>Uygulama:</strong> kısa bağlantı servisinin kodu</li><li><strong>Çalışma zamanı (runtime):</strong> Python yorumlayıcısı ve paketler</li><li><strong>Konuk işletim sistemi (guest OS):</strong> sanal makinenin içindeki sistem</li><li><strong>Sanallaştırma ve donanım:</strong> hipervizör, sunucu, bina</li></ul>
+<h2>Yığın sabit, sınır kayar</h2>
+<p>Bir model seçin ve sınırın nereye kaydığını görün.</p>
+<div class="tabs" id="tabs" role="group" aria-label="Model"></div>
+<div class="tw"><table id="model"></table></div>
+<p id="mdesc"></p>
+<h2>Hangi model, hangi görev?</h2>
+<details><summary>VM kiralarım, konuk sistem yaması bende</summary><p><strong>IaaS.</strong> Altyapı servis olarak: EC2, Azure VM, Compute Engine, OCI Compute.</p></details>
+<details><summary>Kodu yüklerim, çalışma zamanı platformda</summary><p><strong>PaaS.</strong> Uygulama platformu: App Engine, App Service, Elastic Beanstalk.</p></details>
+<details><summary>Hazır uygulama, hesaplar bende</summary><p><strong>SaaS.</strong> Hazır yazılım: kurumsal e-posta, çevrim içi ofis.</p></details>
+<details><summary>Olay gelince işlevim çalışır</summary><p><strong>FaaS.</strong> İşlev: Lambda, Azure Functions, Cloud Run functions.</p></details>
+<h2>Paylaşılan sorumluluk modeli</h2>
+<div class="g2"><div class="box"><h3>Sağlayıcı: bulutun kendisinin güvenliği</h3><p><em>security of the cloud</em><br>bina · donanım · sanallaştırma</p></div><div class="box"><h3>Müşteri: buluta koyduğunun güvenliği</h3><p><em>security in the cloud</em><br>kimlik · yetki · yapılandırma · veri</p></div></div>
+<p class="note">Capital One 2019 ve Code Spaces 2014: altyapı kırılmadı, müşteri tarafı kırıldı.</p>
+<h2>Ürün adı sınırı çizmez</h2>
+<p>Aşağı indikçe daha çok devir, yukarı çıktıkça daha çok denetim:</p>
+<ol reversed><li>Sunucusuz ve işlev (13. hafta): kapasite devredilir</li><li>Yönetilen servis (6 ve 9. hafta): işletim, yama, yedek</li><li>Orkestratör (5–6. hafta): yerleştirme, yeniden başlatma</li><li>Konteyner (3–4. hafta): işletim sistemi kurulumu</li><li>Sanal makine (2. hafta): donanım, hipervizör</li></ol>
+<p>Üst basamak her zaman daha iyi değildir; seçim görev ve maliyetle savunulur.</p>
+<div class="pager" id="pager"></div><footer>Öğr. Gör. Murat Sarı · Çanakkale Teknik Bilimler Meslek Yüksekokulu</footer></main></div><script src="site.js"></script></body></html>

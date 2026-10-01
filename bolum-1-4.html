@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>1.4 – Bulut Bilişim Hafta 01</title><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><div class="wrap"><nav id="nav" aria-label="Bölümler"></nav><main><h1>1.4 Sağlayıcı, hesap ve maliyet</h1>
+<p class="lead">Bütçe uyarısı harcamayı durdurur mu?</p>
+<h2>Bir kaynak nerede durur?</h2>
+<div class="tw"><table><tr><th></th><th>AWS</th><th>Azure</th><th>Google Cloud</th><th>OCI</th></tr>
+<tr><td>Kuruluş kökü</td><td>Organization</td><td>Entra kiracısı</td><td>Organization</td><td>Tenancy</td></tr>
+<tr><td>Gruplama ve faturalama</td><td>OU ve Account</td><td>Subscription, Resource group</td><td>Folder ve Project</td><td>Compartment</td></tr>
+<tr><td>Kaynak (bir bölgede açılır)</td><td>EC2</td><td>Virtual Machine</td><td>Compute Engine</td><td>Compute</td></tr></table></div>
+<p>Açmadan önce dördü belli olsun: <strong>sahibi · ortamı · bölgesi · kapatılacağı zaman.</strong></p>
+<h2>Servis boştayken fatura ne yapar?</h2>
+<p>Kısa bağlantı bir sanal makinede. Gece boyunca hiç istek gelmedi. Hangi kalemler işlemeye devam eder?</p>
+<ul><li>Sanal makinenin işlemci ve bellek saati</li><li>Bağlı disk, ayrılmış genel IP adresi</li><li>Disk anlık görüntüsü, saklanan günlükler</li><li>Kullanıcıya giden trafik</li></ul>
+<details><summary>Sonucu göster</summary><p>Trafik dışında hepsi. Makine kapatılsa bile disk, ayrılmış adres ve anlık görüntü sürebilir. Fatura verisi de saatler gecikebilir.</p></details>
+<h2>"Ücretsiz" üç ayrı teklif olabilir</h2>
+<div class="tw"><table><tr><th>Teklif</th><th>Ne verir</th><th>Biter mi?</th></tr>
+<tr><td>Kredi (free credit)</td><td>Bir tutar</td><td>Tükenir, süresi dolar</td></tr>
+<tr><td>Deneme (free trial)</td><td>Bir süre</td><td>Süre dolar</td></tr>
+<tr><td>Sürekli kota (always free)</td><td>Aylık miktar</td><td>Yenilenir, birikmez</td></tr></table></div>
+<div class="box">OCI 2026: ARM ücretsiz payı 4 çekirdek 24 GB'tan 2 çekirdek 12 GB'a indi. Kaynak adresi ve tarih zorunlu.</div>
+<h2>Aynı ihtiyaç, dört sözleşme</h2>
+<div class="tw"><table><tr><th>İhtiyaç</th><th>AWS</th><th>Azure</th><th>Google Cloud</th><th>OCI</th></tr>
+<tr><td>Kap</td><td>Account</td><td>Subscription</td><td>Project</td><td>Compartment</td></tr>
+<tr><td>IaaS</td><td>EC2</td><td>Virtual Machines</td><td>Compute Engine</td><td>Compute</td></tr>
+<tr><td>PaaS</td><td>Elastic Beanstalk</td><td>App Service</td><td>App Engine</td><td>·</td></tr>
+<tr><td>FaaS</td><td>Lambda</td><td>Functions</td><td>Cloud Run functions</td><td>Functions</td></tr>
+<tr><td>Bütçe</td><td>Budgets</td><td>Cost Management</td><td>Billing budgets</td><td>Budgets</td></tr></table></div>
+<p class="note">Birebir eşdeğer değil · kontrol: 28 Eylül 2026</p>
+<div class="pager" id="pager"></div><footer>Öğr. Gör. Murat Sarı · Çanakkale Teknik Bilimler Meslek Yüksekokulu</footer></main></div><script src="site.js"></script></body></html>

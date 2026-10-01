@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>1.5 – Bulut Bilişim Hafta 01</title><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><div class="wrap"><nav id="nav" aria-label="Bölümler"></nav><main><h1>1.5 Dönemin servisi</h1>
+<p class="lead">Servis hedef sayfayı indirir mi?</p>
+<h2>Bir yönlendirme isteğinin yolu</h2>
+<ol class="flow"><li><b>İstemci</b>GET /r/k1/ders</li><li><b>127.0.0.1:8080</b>adres ve port</li><li><b>Servis süreci</b>kodu arar</li><li><b>302 + Location</b>yanıt, gövde boş</li><li><b>Hedef site</b>istemci kendi gider</li></ol>
+<h2>İlk yanıtı okumak</h2>
+<p>Yanıtın durum satırı ne olur? Gövdesi kaç bayttır?</p>
+<pre>curl -i http://127.0.0.1:8080/r/k1/ders</pre>
+<details><summary>Çıktıyı göster</summary><pre>HTTP/1.0 302 Found
+Content-Length: 0
+X-App-Version: v1
+Cache-Control: no-store
+Location: https://example.org/k1</pre><p>Servis kapalıyken: <code>curl: (7) ... Couldn't connect to server</code>. Durum kodu yoktur.</p></details>
+<h2>Servisin sözleşmesi</h2>
+<ul><li><code>(tenant, code)</code> benzersizdir; ikinci kayıt 409</li><li>Yönetim API'si kimliğe göre kiracıya ayrılır; anahtarsız istek 401</li><li>Hedefler yalnız <code>example.org</code> / <code>example.com</code>, HTTPS</li><li>Ayarlar ortam değişkeninden: <code>PORT=8081 python3 servis/app.py</code></li></ul>
+<p class="note">Kayıtlar <code>veri/kisa.db</code> dosyasında: süreç sonlanır, dosya kalır. Açık internete üretim uygulaması olarak sunulmaz.</p>
+<div class="pager" id="pager"></div><footer>Öğr. Gör. Murat Sarı · Çanakkale Teknik Bilimler Meslek Yüksekokulu</footer></main></div><script src="site.js"></script></body></html>

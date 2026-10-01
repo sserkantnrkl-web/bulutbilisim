@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>1.1 – Bulut Bilişim Hafta 01</title><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><div class="wrap"><nav id="nav" aria-label="Bölümler"></nav><main><h1>1.1 Bulutu bir servis yapan nedir</h1>
+<p class="lead">Uzaktaki bir sunucu neden tek başına bulut değildir?</p>
+<h2>Sorun: tepe yüke göre satın almak</h2>
+<div class="g2"><div class="box"><h3>Kendi sunucunuz</h3><ul><li>Tahmin, satın alma, teslim, kurulum: haftalar</li><li>Kapasite tepe yüke göre alınır</li><li>Yılın çoğunda donanım boş bekler</li><li>Sermaye harcaması (CapEx)</li></ul></div><div class="box"><h3>Kullandığın kadar</h3><ul><li>API çağrısıyla kaynak: dakikalar</li><li>Kapasite talebe göre büyür, küçülür</li><li>Kullanılan dönem ve miktar faturalanır</li><li>İşletme gideri (OpEx)</li></ul></div></div>
+<h2>Bulut nereden çıktı?</h2>
+<ol class="flow"><li><b>1960lar</b>fayda fikri, zaman paylaşımı</li><li><b>1990lar</b>veri merkezi, ucuz standart donanım</li><li><b>2000ler</b>sanallaştırma, her şeye API</li><li><b>2006</b>AWS: S3 ve EC2 herkese açık</li><li><b>2011</b>NIST SP 800-145 tanımı</li></ol>
+<p class="note">2008 App Engine ve Azure · 2014 AWS Lambda ile işlev modeli</p>
+<h2>Beş özellik birlikte aranır</h2>
+<div class="box">NIST: paylaşılmış kaynak havuzuna talep üzerine, ağ üzerinden, asgari yönetim çabasıyla erişim sağlayan model.</div>
+<ul><li><strong>İsteğe bağlı self servis</strong> (on-demand self-service): insan onayı yok</li><li><strong>Geniş ağ erişimi</strong> (broad network access): standart protokol</li><li><strong>Kaynak havuzlama</strong> (resource pooling): fiziksel paylaşım, mantıksal yalıtım</li><li><strong>Hızlı esneklik</strong> (rapid elasticity): artırmak kadar azaltmak da</li><li><strong>Ölçülen servis</strong> (measured service): tüketim, fatura</li></ul>
+<h2>Kısa bağlantıda beş özellik</h2>
+<div class="tw"><table><tr><th>Servisteki gözlem</th><th>Hangi özellik</th></tr>
+<tr><td>POST ile yeni kayıt, kimse onaylamadan 201</td><td>Self servis</td></tr>
+<tr><td>curl da tarayıcı da aynı isteği atar</td><td>Geniş ağ erişimi</td></tr>
+<tr><td>k1 ile k2 aynı dosyada, birbirini görmez</td><td>Havuzlama ve mantıksal yalıtım</td></tr>
+<tr><td>Etkinlik bitince kapasite geri iner</td><td>Esneklik geri yönde de çalışmalı</td></tr>
+<tr><td><code>/api/stats</code> kiracı başına sayım verir</td><td>Ölçülen servis</td></tr></table></div>
+<h2>"Bulut, başkasının bilgisayarıdır"</h2>
+<details><summary>İddia: Bulut yalnız başkasının bilgisayarıdır. Doğru mu, yanlış mı?</summary><p><strong>Yanlış.</strong> Doğru yanı: kod gerçek bir binada, gerçek bir makinede çalışır; o da arızalanır (AWS S3 kesintisi, 28 Şubat 2017). Eksik yanı: self servis, esneklik ve ölçümü atlar; sorumluluğun bölüşümünü gizler.</p></details>
+<div class="pager" id="pager"></div><footer>Öğr. Gör. Murat Sarı · Çanakkale Teknik Bilimler Meslek Yüksekokulu</footer></main></div><script src="site.js"></script></body></html>

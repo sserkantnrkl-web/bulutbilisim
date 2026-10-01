@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Çalışmalar – Bulut Bilişim Hafta 01</title><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><div class="wrap"><nav id="nav" aria-label="Bölümler"></nav><main><h1>Çözümlü çalışmalar</h1>
+<h2>Çalışma 1 · Yama kime ait?</h2>
+<div class="tw"><table><tr><th>Görev</th><th>Sanal makinede</th><th>Yönetilen ortamda</th></tr>
+<tr><td>Konuk sistem yaması</td><td>Müşteri</td><td>Platform</td></tr>
+<tr><td>Çalışma zamanı sürümü</td><td>Müşteri</td><td>Platform</td></tr>
+<tr><td>Uygulama bağımlılıkları</td><td>Müşteri</td><td>Müşteri</td></tr>
+<tr><td>Yeni sürümle uyumun sınanması</td><td>Müşteri</td><td>Müşteri</td></tr>
+<tr><td>Veri ve erişim politikası</td><td>Müşteri</td><td>Müşteri</td></tr></table></div>
+<p>Sonuç "bana iş kalmadı" değil; görev listesi değişti.</p>
+<h2>Çalışma 2 · Ücretsiz etiketini sınamak</h2>
+<p class="note">Temsili hesap: 10 birim kredi, 8 birimde uyarı, saatte 1 birim tüketim, fatura verisi 2 saat gecikmeli.</p>
+<div class="tw"><table><tr><th>Saat</th><th>Gerçek harcama</th><th>Sistemin gördüğü</th><th>Olay</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>kaynak açıldı</td></tr><tr><td>8</td><td>8</td><td>6</td><td>eşik aşıldı, görünmüyor</td></tr>
+<tr><td>10</td><td>10</td><td>8</td><td>uyarı gönderildi</td></tr><tr><td>12</td><td>12</td><td>10</td><td>kaynak hâlâ açık; uyarı harcamayı durdurmadı</td></tr></table></div>
+<p>Çözüm tek ayar değil, dört önlem birlikte:</p>
+<div class="tw"><table><tr><th>Önlem</th><th>Etkisi</th></tr><tr><td>Küçük kaynak</td><td>saatlik tüketim düşer</td></tr><tr><td>Kısıtlı ölçek</td><td>tavan belirlenir</td></tr><tr><td>Kısa deney</td><td>süre sınırlanır</td></tr><tr><td>Kapatma doğrulaması</td><td>artık kaynak kalmaz</td></tr></table></div>
+<h2>Çalışma 3 · Bu bir bulut mu?</h2>
+<div class="tw"><table><tr><th>Özellik</th><th>A · Kiralık sunucu</th><th>B · Kampüs portalı</th><th>C · Sağlayıcı API</th></tr>
+<tr><td>Self servis</td><td>destek talebi</td><td>portal</td><td>API</td></tr><tr><td>Havuzlama</td><td>tek müşteri</td><td>bölümler paylaşır</td><td>var</td></tr>
+<tr><td>Esneklik</td><td>günler</td><td>dakikalar, havuz kadar</td><td>var</td></tr><tr><td>Ölçüm</td><td>sabit ücret</td><td>bölüm bütçesine</td><td>saniye başına</td></tr></table></div>
+<details><summary>Yanıtı göster</summary><p><strong>A</strong> bulut değil · <strong>B</strong> özel bulutta IaaS · <strong>C</strong> genel bulutta IaaS</p></details>
+<h2>Doğru mu, yanlış mı?</h2>
+<details><summary>Yönetilen serviste müşteri güvenlik işi yapmaz.</summary><p><strong>Yanlış.</strong> Kimlik, veri ve yapılandırma her modelde müşteride.</p></details>
+<details><summary>Bütçe uyarısı harcamayı durdurur.</summary><p><strong>Yanlış.</strong> Uyarı bildirimdir ve gecikir; durdurma ayrıca kurulur.</p></details>
+<details><summary>Ücretsiz katmanda kaldıkça fatura gelmez.</summary><p><strong>Yanlış.</strong> Kredi tükenir, kota aylıktır; koşul tarihiyle okunur.</p></details>
+<div class="pager" id="pager"></div><footer>Öğr. Gör. Murat Sarı · Çanakkale Teknik Bilimler Meslek Yüksekokulu</footer></main></div><script src="site.js"></script></body></html>
